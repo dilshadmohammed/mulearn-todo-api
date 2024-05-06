@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+  }
+  
+  .banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 19rem;
+  }
+  .banner-dark {
+    background-image: url('/banner-night.jpg');
+    background-position: center;
+  }
+  .banner-light {
+    background-image: url('/banner-light.jpg');
+    background-position: top;
+  }
+  body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.8rem;
+    @apply bg-main-bg dark:bg-dark-main-bg text-primary-txt dark:text-dark-primary-txt
+  }  
+
+
+  .filter-button {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.4rem;
+    color: var(--btn-text-color);
+    cursor: pointer;
+  }
+  
+  .filter-button:hover {
+    color: var(--hover-color);
+  }
+  
+  .filter-button.active {
+    color: var(--bright-blue);
+  }
+
+  .todos-list {
+    list-style-type: none;
+  }
+
+  .button-box {
+    @apply ml-5 flex gap-5 font-bold
+  }
+
+  .inactive {
+    @apply opacity-50
+  }
